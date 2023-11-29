@@ -1,14 +1,14 @@
 def get_valid_input(prompt):
     while True:
-            try:
-                user_input = input(prompt)
-                if user_input.replace('.', '', 1).isdigit():
-                    value = float(user_input)
-                    return value
-                else:
-                    print("Invalid input. Please enter a numeric value.")
-            except ValueError:
+        try:
+            user_input = input(prompt)
+            if user_input.replace('.', '', 1).isdigit():
+                value = float(user_input)
+                return value
+            else:
                 print("Invalid input. Please enter a numeric value.")
+        except ValueError:
+            print("Invalid input. Please enter a numeric value.")
 
 
 def calculate_bmi(height, weight):
